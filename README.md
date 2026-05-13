@@ -1,275 +1,197 @@
+# 📚 StudyFire - Study Streak Heatmap
 
-# 📚 StudyFire
+A modern, feature-rich study tracking application built with React and Vite. Track your daily study sessions, maintain streaks, visualize your progress, and stay motivated on your learning journey!
 
-> A modern study streak tracking application built with React and Vite.  
-Track your daily study sessions, maintain streaks, visualize your progress, and stay motivated on your learning journey!
+## 🎯 Features
 
----
+- **Study Heatmap**: Visual representation of your study consistency
+- **Streak Tracking**: Build and maintain daily study streaks
+- **Analytics Dashboard**: Comprehensive insights into your study patterns
+- **Weekly Challenges**: Set and track weekly study goals
+- **Pomodoro Timer**: Built-in focused study sessions
+- **Subject Performance**: Track progress by subject
+- **Daily Insights**: Personalized feedback on your study habits
+- **Dark/Light Theme**: Toggle between themes for comfortable viewing
+- **Responsive Design**: Works seamlessly on desktop and mobile
+- **Professional Logo**: Modern, clean branding throughout
 
-## ✨ Features
-
-- 🔥 Study Heatmap for consistency tracking
-- 📈 Daily and weekly streak monitoring
-- 📊 Analytics dashboard with charts
-- 🎯 Weekly study challenges
-- ⏳ Built-in Pomodoro timer
-- 📚 Subject-wise performance tracking
-- 💡 Personalized daily insights
-- 🌙 Dark and Light mode support
-- 📱 Fully responsive design
-- 🎨 Clean and professional UI
-
----
-
-## 🚀 Live Demo
-
-Add your deployed link here:
-
-```bash
-https://your-app-name.vercel.app
-```
-
----
-
-## 📸 Screenshots
-
-### Dashboard
-![Dashboard](./screenshots/dashboard.png)
-
-### Heatmap
-![Heatmap](./screenshots/heatmap.png)
-
-### Analytics
-![Analytics](./screenshots/analytics.png)
-
----
-
-## 🛠️ Tech Stack
-
-- React 18
-- Vite 5
-- Tailwind CSS
-- Recharts
-- Lucide React
-- date-fns
-
----
-
-## 📦 Installation
+## 🚀 Quick Start
 
 ### Prerequisites
+- **Node.js** (v16 or higher)
+- **npm** or **yarn**
 
-Make sure you have installed:
+### Installation
 
-- Node.js (v16 or higher)
-- npm or yarn
+1. **Clone or navigate to the project directory**:
+   ```bash
+   cd study-streak-heatmap
+   ```
 
----
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### Clone the Repository
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-git clone https://github.com/your-username/studyfire.git
-cd studyfire
-```
+4. **Open your browser** and navigate to:
+   ```
+   http://localhost:5173/
+   ```
 
----
+## 📦 Build for Production
 
-### Install Dependencies
-
-```bash
-npm install
-```
-
----
-
-### Start Development Server
-
-```bash
-npm run dev
-```
-
-Now open:
+To create an optimized production build:
 
 ```bash
-http://localhost:5173
+npm run build
 ```
 
----
+This generates a `dist/` folder with minified files ready for deployment.
+
+## 👀 Preview Production Build
+
+To test the production build locally:
+
+```bash
+npm run preview
+```
 
 ## 🏗️ Project Structure
 
-```bash
-studyfire/
+```
+study-streak-heatmap/
 ├── src/
 │   ├── components/
-│   │   ├── charts/
-│   │   ├── features/
-│   │   ├── forms/
-│   │   ├── heatmap/
-│   │   ├── layout/
-│   │   ├── pomodoro/
-│   │   └── ui/
-│   ├── context/
-│   ├── hooks/
-│   ├── pages/
-│   ├── utils/
-│   ├── data/
-│   ├── App.jsx
-│   └── main.jsx
-├── public/
-├── index.html
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── postcss.config.js
+│   │   ├── charts/          # Data visualization charts
+│   │   ├── features/        # Feature components
+│   │   ├── forms/           # Input forms
+│   │   ├── heatmap/         # Heatmap visualization
+│   │   ├── layout/          # Layout components (Navbar, Sidebar)
+│   │   ├── pomodoro/        # Pomodoro timer
+│   │   └── ui/              # Reusable UI components
+│   ├── context/             # React Context (Theme, Study data)
+│   ├── hooks/               # Custom React hooks
+│   ├── pages/               # Page components
+│   ├── utils/               # Utility functions
+│   ├── data/                # Sample data
+│   ├── App.jsx              # Main app component
+│   └── main.jsx             # Entry point
+├── index.html               # HTML template
+├── package.json             # Dependencies and scripts
+├── vite.config.js           # Vite configuration
+├── tailwind.config.js       # Tailwind CSS configuration
+└── postcss.config.js        # PostCSS configuration
 ```
 
----
+## 🎨 UI Components
 
-## 🎯 Key Features
+### Logo Component
+Professional SVG logo that replaces emoji symbols throughout the app
+```jsx
+<Logo size="md" withText={true} />
+```
 
-### 🔥 Study Logging
-
-Log your daily study sessions with:
-
-- Study duration
-- Subject selection
-- Optional notes
-
----
-
-### 📈 Streak Tracking
-
-- Current streak
-- Best streak
-- Motivational progress tracking
-
----
-
-### 🎯 Weekly Challenges
-
-Set weekly study goals and monitor completion progress.
-
----
-
-### ⏳ Pomodoro Timer
-
-- 25-minute focus sessions
-- Break reminders
-- Productivity enhancement
-
----
+### Auth Modal
+Functional Sign In and Get Started modals with form validation
+```jsx
+<AuthModal 
+  isOpen={isOpen} 
+  onClose={handleClose} 
+  type="signin" // or "signup"
+/>
+```
 
 ## 🌙 Theme Support
 
-Toggle between Light and Dark mode.  
-Your theme preference is saved using localStorage.
+Switch between light and dark modes using the theme toggle in the navbar. Your preference is saved to `localStorage`.
 
----
+## 📊 Key Pages
+
+- **Dashboard**: Overview of streaks, heatmap, and daily insights
+- **Analytics**: Detailed charts and statistics
+- **Calendar**: Calendar view of study sessions
+- **Settings**: App preferences and goals
+
+## 🔑 Key Features Explained
+
+### Study Logging
+Click "Quick Study" to log study sessions with:
+- Duration (in hours)
+- Subject selection
+- Notes (optional)
+
+### Streak Tracking
+- **Current Streak**: Consecutive days of studying
+- **Best Streak**: Your personal best
+- **Motivational Messages**: Based on your streak milestones
+
+### Weekly Challenges
+Set study hour targets for the week and track your progress
+
+### Pomodoro Timer
+25-minute focused study sessions with break reminders
+
+## 🛠️ Technologies
+
+- **React 18**: UI framework
+- **Vite 5**: Fast build tool
+- **Tailwind CSS**: Styling
+- **Recharts**: Data visualization
+- **Lucide React**: Icons
+- **date-fns**: Date utilities
 
 ## 💾 Data Storage
 
-This application stores data locally in your browser using localStorage.
-
-Stored data includes:
-
+All data is stored locally in your browser using `localStorage`:
 - Study sessions
-- User preferences
-- Theme settings
-- Weekly goals
-
-> ⚠️ Note: Data will not sync across multiple devices.
-
----
-
-## 📊 Available Scripts
-
-| Command | Description |
-|----------|-------------|
-| npm run dev | Start development server |
-| npm run build | Create production build |
-| npm run preview | Preview production build |
-
----
-
-## 🧱 Architecture
-
-- Frontend: React + Vite
-- State Management: Context API
-- Styling: Tailwind CSS
-- Charts: Recharts
-- Storage: localStorage
-
----
-
-## 🚀 Future Improvements
-
-- Firebase integration
-- User authentication
-- Cloud sync support
-- AI study recommendations
-- Export analytics reports
-
----
+- Theme preference
+- User information
 
 ## 🐛 Troubleshooting
 
-### Port already in use
-
+### Port 5173 already in use?
 ```bash
 npm run dev -- --port 3000
 ```
 
----
+### Build errors?
+1. Clear node_modules: `rm -rf node_modules`
+2. Reinstall: `npm install`
+3. Try building again: `npm run build`
 
-### Build Errors
+### Dark mode not working?
+Clear your browser cache or localStorage
 
-```bash
-rm -rf node_modules
-npm install
-npm run build
-```
+## 📝 Available Scripts
 
----
-
-### Dark Mode Not Working
-
-Clear browser cache or localStorage.
-
----
-
-## 🤝 Contributing
-
-Feel free to fork this repository and improve the project.
-
----
-
-## 👨‍💻 Author
-
-**Karthik TS**
-
-- GitHub: https://github.com/Karthiktelagi
-
----
+| Command | Purpose |
+|---------|---------|
+| `npm run dev` | Start development server |
+| `npm run build` | Create production build |
+| `npm run preview` | Preview production build |
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is open source and available under the MIT License.
 
----
+## 🤝 Contributing
+
+Feel free to fork, modify, and enhance this project!
 
 ## 🎓 Learning Path
 
-If you're new to React, explore these folders:
-
-1. `src/App.jsx` → Main application structure
-2. `src/context/` → State management
-3. `src/components/` → Reusable UI components
-4. `src/hooks/` → Custom React hooks
+New to React? Here's what to explore:
+1. Check out `src/App.jsx` for the main component structure
+2. Look at `src/context/` to understand state management
+3. Explore `src/components/` to see component composition
+4. Study `src/hooks/` for custom hook patterns
 
 ---
 
-# ⭐ Keep Your Study Streak Alive!
-```
-````
+**Happy Studying! Keep your streak alive! 🔥**
+#
