@@ -1,4 +1,4 @@
-````md
+
 # 📚 StudyFire
 
 > A modern study streak tracking application built with React and Vite.  
